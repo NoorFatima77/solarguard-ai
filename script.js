@@ -1,5 +1,5 @@
 // Paste the live demo (gradio.live) link between the quotes when the app is running.
-var DEMO_URL = " https://fcef0d53be1281a200.gradio.live";
+var DEMO_URL = " https://8ce941a2972912b577.gradio.live";
 (function () {
   var links = document.querySelectorAll('[data-demo]');
   for (var i = 0; i < links.length; i++) {
