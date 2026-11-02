@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" href="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text y=%22.9em%22 font-size=%2290%22&gt;☀️&lt;/text&gt;&lt;/svg&gt;">
+<title>SolarGuard AI | Solar Panel Condition Classifier</title>
+<meta name="description" content="SolarGuard AI checks the condition of a solar panel from a single photo. A BSAI 5th semester project by Team MENTALYTICS, Riphah International University, Faisalabad.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&amp;display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="wrap nav">
+<a class="brand" href="#top"><img src="images/riphah_logo.png" alt="Riphah International University logo"><span>SolarGuard AI</span></a>
+<nav class="links"><a href="#problem">Problem</a><a href="#how">How it works</a><a href="#conditions">Conditions</a><a href="#tech">Technology</a><a href="#team">Team</a><a class="btn sm" data-demo href="#demo">Try the demo</a></nav>
+</div></header>
+
+<main id="top">
+<div class="hero"><div class="wrap">
+<div>
+<span class="tag">BSAI 5th Semester Integrated Project</span>
+<h1>Solar panel health check from <span>one photo</span></h1>
+<p class="lead">SolarGuard AI looks at a photo of a solar panel and tells you its condition, then suggests what to do next.</p>
+<div class="cta"><a class="btn" data-demo href="#demo">Try the live demo</a><a class="btn ghost" href="#how">See how it works</a></div>
+</div>
+<div class="shot"><img src="images/rooftop_solar.png" alt="Solar panels on a rooftop being scanned by AI"><i class="br a"></i><i class="br b"></i><i class="br c"></i><i class="br d"></i><i class="scan"></i><span class="pill">AI scanning panel</span></div>
+</div></div>
+<div class="stats"><div class="wrap"><div><b>869</b><span>images in the dataset</span></div><div><b>6</b><span>panel conditions</span></div><div><b>3</b><span>AI models combined</span></div></div></div>
+
+<section id="problem"><div class="wrap two">
+<div><div class="eyebrow">The problem</div><h2>Checking rooftop panels by hand is slow and risky</h2>
+<p class="sub" style="margin-bottom:0">Dust, bird droppings, snow and damage reduce the power a panel produces. Solar is growing fast in Pakistan, so owners need a quick and safe way to know when a panel needs attention.</p></div>
+<div class="card"><h3>Our solution</h3><p>Take a photo, upload it, and get the panel’s condition with a confidence score and a suggested action, in a couple of seconds, from your phone or laptop.</p></div>
+</div></section>
+
+<section id="how" class="alt"><div class="wrap">
+<div class="eyebrow">How it works</div><h2>Three simple steps</h2><p class="sub">No special equipment. Just a photo of the panel.</p>
+<div class="grid">
+<div class="card"><div class="num">1</div><h3>Upload a photo</h3><p>Take a picture of the solar panel or choose one from your gallery.</p></div>
+<div class="card"><div class="num">2</div><h3>AI analyses it</h3><p>Three deep learning models study the image and vote on the condition.</p></div>
+<div class="card"><div class="num">3</div><h3>Get the result</h3><p>See the condition, how confident the AI is, and what action to take.</p></div>
+</div></div></section>
+
+<section id="conditions"><div class="wrap">
+<div class="eyebrow">What it detects</div><h2>Six panel conditions</h2><p class="sub">Each condition comes with a simple suggested action.</p>
+<div class="grid">
+<div class="card cond" style="--c:#16A34A"><h3>Clean</h3><p>No action needed.</p></div>
+<div class="card cond" style="--c:#CA8A04"><h3>Dusty</h3><p>Rinse with water and wipe with a soft cloth.</p></div>
+<div class="card cond" style="--c:#0EA5E9"><h3>Snow-Covered</h3><p>Remove snow gently; do not scrape the glass.</p></div>
+<div class="card cond" style="--c:#92400E"><h3>Bird-drop</h3><p>Wipe off the droppings soon, then rinse.</p></div>
+<div class="card cond" style="--c:#DC2626"><h3>Electrical Damage</h3><p>Switch off the system and call a technician.</p></div>
+<div class="card cond" style="--c:#7C3AED"><h3>Physical Damage</h3><p>Get the panel inspected; it may need replacing.</p></div>
+</div></div></section>
+
+<section id="tech" class="alt"><div class="wrap">
+<div class="eyebrow">Technology</div><h2>Built with computer vision, machine learning and deep learning</h2>
+<p class="sub">We trained on 869 solar panel images from Kaggle (6 classes) and compared classic ML with modern deep learning.</p>
+<div class="grid">
+<div class="card"><h3>Machine learning</h3><p>Shape features (HOG) and color features (HSV histogram) feed Random Forest, SVM and KNN models.</p></div>
+<div class="card"><h3>Deep learning</h3><p>Transfer learning with MobileNetV2, EfficientNetB0 and ResNet50, combined as an ensemble for the final answer.</p></div>
+<div class="card"><h3>Computer vision</h3><p>Images are cleaned, resized to 224 x 224 and split into training, validation and test sets.</p></div>
+</div>
+<div class="chips"><span class="chip">Python</span><span class="chip">TensorFlow / Keras</span><span class="chip">OpenCV</span><span class="chip">scikit-learn</span><span class="chip">Gradio</span><span class="chip">Google Colab</span></div>
+</div></section>
+
+<section id="team"><div class="wrap">
+<div class="eyebrow">The team</div><h2>Team MENTALYTICS</h2><p class="sub">Three students, three fields, one project.</p>
+<div class="grid">
+<div class="card"><div class="avatar">S</div><h3>Sadia</h3><div class="role">Computer Vision</div><p>Data exploration, image preprocessing and the train, validation and test split.</p></div>
+<div class="card"><div class="avatar">S</div><h3>Sonia</h3><div class="role">Machine Learning</div><p>HOG and color features, Random Forest, SVM and KNN, and model evaluation.</p></div>
+<div class="card"><div class="avatar">N</div><h3>Noor</h3><div class="role">Deep Learning</div><p>Deep learning models, training curves and the web demo.</p></div>
+</div></div></section>
+
+<section id="demo" class="demo"><div class="wrap">
+<div class="eyebrow" style="color:var(--amber)">Live demo</div><h2>Try SolarGuard AI</h2>
+<p id="demo-note">Visit our stall at the Riphah orientation and try it with your own panel photo.</p>
+<a id="demo-btn" class="btn" data-demo href="#demo" style="display:none">Open the live demo</a>
+</div></section>
+</main>
+
+<footer><div class="wrap"><div>SolarGuard AI by Team MENTALYTICS</div><div>Department of Artificial Intelligence, Riphah International University, Faisalabad Campus</div></div></footer>
+
+<script src="script.js"></script>
+</body>
+</html>
